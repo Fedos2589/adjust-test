@@ -1,7 +1,7 @@
 // Please implement your solution in this file
 
 export const prepareData = ({year, customerName}) => (data) =>
-  data.reduceRight((acc, cur) => {
+  data?.reduceRight((acc, cur) => {
     if (cur.launch_year === String(year)) {
       let includesCustomer = false;
       const payloads = [...cur.rocket?.second_stage?.payloads];
